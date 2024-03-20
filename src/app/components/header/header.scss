@@ -10,7 +10,7 @@ header.header {
     right: 0;
     padding: 10px 0px;
     width: 100%;
-    background: var(--darkgrey-color);
+    background: var(--blue-color);
     
     .container {
         position: relative;
@@ -34,6 +34,10 @@ header.header {
         display: none;
     }
 
+    a {
+        color: var(--white-color);
+    }
+
     li {
         position: relative;
 
@@ -51,11 +55,7 @@ header.header {
             li {
                 a {
                     padding: 0 0 20px;
-                    color: rgba(34, 34, 34, 0.80) !important;
-
-                    &:hover {
-                        color: var(--blue-color) !important;
-                    }
+                    color: var(--white-color);
                 }
 
                 &:last-of-type {
@@ -161,7 +161,6 @@ header.header {
     }
 
     a {
-        color: var(--white-color);
         transition: all linear .3s;
 
         &:hover {
