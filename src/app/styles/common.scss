@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #263A7F;
+    --white-color: #ffffff;
+    --secondry-color: #E62426;
+    --light-bg: rgba(158, 190, 230, 0.322);
+    --light-blue-color: #BBD3ED;
+    --lightbg-blue-color: #e0eaf7;
+    --grey-color: #E9E7E2;
+    --darkgrey-color: #3C3C3C;
+    --light-grey-color: #8A8C8C;
+    --greybg-color: #DDDAD3A6;
+    --dark-blue: #9EC0E6
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0;
+    background: var(--white-color);
+    top: 0 !important;
+}
+
+.container {
+    width: 100%;
+    padding: 0 50px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.inner-container {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+input::placeholder,
+select,
+textarea::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Noto Sans', sans-serif;
+    color: rgba(34, 34, 34, 0.8);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: none;
+    outline: none;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+// Common Button
+.common-btn {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    padding: 18px 36px;
+    align-items: center;
+    letter-spacing: -0.01em;
+    background: linear-gradient(89.87deg, #A0C882 0.09%, #004983 99.86%);
+    box-shadow: 0px 8px 11px rgba(0, 0, 0, 0.17);
+    border-radius: 4px;
+    transition: all linear .3s;
+    display: flex;
+    color: var(--white-color);
+
+    .icon {
+        display: inline;
+        position: relative;
+        transition: all linear .3s;
+        margin-left: 10px;
+        background-size: 100% 100%;
+    }
+
+    &.not-require {
+        display: none !important;
+    }
+
+    &.light-bg {
+        background: var(--white-color);
+        border: 1px solid var(--blue-color);
+        color: var(--blue-color);
+        box-shadow: none;
+
+        .icon {
+            display: none;
+        }
+
+        &:hover {
+            background: var(--blue-color);
+            color: var(--white-color);
+        }
+    }
+}

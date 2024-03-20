@@ -1,0 +1,202 @@
+header.header {
+    position: static;
+    top: 0px;
+    z-index: 99;
+    left: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    transition: all linear .3s;
+    right: 0;
+    padding: 10px 0px;
+    width: 100%;
+    background: var(--darkgrey-color);
+    
+    .container {
+        position: relative;
+    }
+
+    .logo {
+        padding: 0px 0;
+        transition: all linear .3s;
+
+        img {
+            filter: none !important;
+        }
+    }
+
+    .toggle-icon,
+    .close-icon {
+        display: none;
+    }
+
+    .nav-sec.no-require {
+        display: none;
+    }
+
+    li {
+        position: relative;
+
+        ul.dropdown {
+            position: absolute;
+            width: 269px;
+            padding: 27px 23px 23px 23px;
+            background: #fff;
+            box-shadow: 0px 5px 39px 0px rgba(0, 0, 0, 0.10);
+            transition: all linear .3s;
+            border-radius: 4px;
+            animation: dropdownanimate linear .3s alternate;
+            display: none;
+
+            li {
+                a {
+                    padding: 0 0 20px;
+                    color: rgba(34, 34, 34, 0.80) !important;
+
+                    &:hover {
+                        color: var(--blue-color) !important;
+                    }
+                }
+
+                &:last-of-type {
+                    a {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        &:last-of-type {
+            ul.dropdown {
+                right: 0;
+            }
+        }
+
+        &:hover {
+            ul.dropdown {
+                display: block;
+            }
+        }
+
+        &.dropdown-menus {
+            position: relative !important;
+
+            >a,
+            >.mLink {
+                position: relative;
+                padding-right: 25px;
+                color: var(--white-color);
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 7px;
+                    height: 7px;
+                    display: block;
+                    transition: all linear .3s;
+                    border: solid currentColor;
+                    border-width: 0 0 1px 1px;
+                    transform: rotate(-45deg);
+                    right: 4px;
+                    bottom: 0;
+                    top: -6px;
+                    margin: auto;
+                }
+
+            }
+
+            &:hover {
+                a,
+                .mLink {
+                    color: var(--green-color);
+                    &:after {
+                        transform: rotate(-225deg);
+                        top: 5px;
+                        color: var(--green-color);
+                    }
+                }
+            }
+
+            span.arrow-btn {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                background: var(--blue-color);
+                border-radius: 4px;
+                right: 8px;
+                top: 8px;
+                z-index: 9;
+                display: none;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    display: block;
+                    transition: all linear .3s;
+                    border: solid #fff;
+                    border-width: 0 0 2px 2px;
+                    transform: rotate(-45deg);
+                    right: 0px;
+                    bottom: 16px;
+                    left: 0;
+                    margin: 0 auto;
+                }
+
+                &:hover {
+                    a:after {
+                        transform: rotate(-225deg);
+                    }
+                }
+            }
+
+        }
+    }
+
+    li:last-of-type {
+        a {
+            padding-right: 0;
+        }
+    }
+
+    a {
+        color: var(--white-color);
+        transition: all linear .3s;
+
+        &:hover {
+            color: var(--green-color);
+        }
+    }
+
+    .bottom {
+        &>ul {
+            column-gap: 25px;
+        }
+    }
+
+    &.small {
+        background: #fff;
+        box-shadow: 0 0 25px rgba(0, 0, 0, .1);
+
+        .logo {
+            padding: 5px 0;
+            max-width: 125px;
+        }
+
+        a,
+        .mLink {
+            color: var(--blue-color) !important;
+            filter: none !important;
+            transition: all linear .3s;
+
+            &:hover {
+                color: var(--green-color) !important
+            }
+        }
+
+        li:hover>a {
+            color: var(--green-color);
+        }
+    }
+}
