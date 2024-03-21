@@ -3,6 +3,7 @@ import "./globals.css";
 import '@/app/styles/app.scss';
 import Head from "next/head";
 import SiteHeader from '@/app/components/header/Header'
+import Footer from '@/app/components/footer/Footer'
 
 export const metadata: Metadata = {
     title: "Vinsys",
@@ -23,6 +24,7 @@ export default function RootLayout({
                 <main className="flex min-h-screen flex-col items-center justify-between">
                     <SiteHeader />
                     {children}
+                    {/* <Footer /> */}
                 </main>
             </body>
         </html>
