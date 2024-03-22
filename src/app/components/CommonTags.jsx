@@ -51,7 +51,7 @@ const CommonHeadingHtwo = (props) => {
 const CommonSubHeading = props => {
     return (
         <>
-            <div className={`subheading mt-2 ${props.styleClass}`}>{props.text}</div>
+            <p className={`subheading mt-2 ${props.styleClass}`}>{props.text}</p>
         </>
     )
 }

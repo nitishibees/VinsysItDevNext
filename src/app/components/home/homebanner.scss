@@ -1,7 +1,21 @@
 .homebanner {
     position: relative;
+    overflow: hidden;
+    min-height: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
     .img-banner {
-        min-height: 600px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {
             object-fit: cover;
@@ -11,13 +25,7 @@
     }
 
     .inner-content {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
         max-width: 600px;
 
         .common-heading {
@@ -34,16 +42,12 @@
 }
 
 @media only screen and (max-width: 767px) {
-    // .homebanner {
-    //     .img-banner {
-    //         min-height: 400px;
+    .homebanner {
+        flex-direction: column;
+        background: #333;
     
-    //         img {
-    //             object-fit: cover;
-    //             width: 100%;
-    //             height: 100%;
-    //             min-height: 600px;
-    //         }
-    //     }
-    // }    
+        .img-banner {
+            position: static;
+        }
+    }
 }
