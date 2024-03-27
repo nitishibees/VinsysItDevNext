@@ -1,0 +1,70 @@
+.casestudy-listing {
+    .inner-content {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 14px 44px 0px rgba(86, 91, 221, 0.102);
+        background: var(--white-color);
+        height: 100%;
+    }
+
+    .img-wrapper {
+        position: relative;
+        img {
+            width: 100%;
+        }
+
+        .label {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            background: var(--blue-color);
+            color: var(--white-color);
+            border: 1px solid rgba($color: #ffffff, $alpha: 0.6);
+            width: max-content;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .date {
+            background: linear-gradient(90deg, #054A80 0%, #9BC582 100%);
+            width: 80px;
+            height: 80px;
+            margin-top: -50px;
+            margin-left: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: var(--white-color);
+            position: relative;
+
+            span {
+                display: block;
+                font-size: 32px;
+                line-height: 42px;
+                font-weight: 700;
+            }
+        }
+    }
+    .content {
+        padding: 25px 20px 0;
+    }
+    .title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+
+    .btn-wrapper {
+        padding: 0px 20px 40px 20px;
+    }
+}

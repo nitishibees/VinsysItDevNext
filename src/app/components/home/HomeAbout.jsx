@@ -6,7 +6,7 @@ const HomeAbout = props => {
     return (
         <>
             <CommonSection styleClass="home-about-section">
-                <div className='inner-content grid grid-cols-5 gap-8 items-center'>
+                <div className='inner-content grid grid-cols-5 gap-8 md:gap-16 items-center'>
                     <div className='img-wrapper col-span-5 lg:col-span-2'>
                         <Image src='/images/home/homeAbout.webp' alt='about' width={550} height={419} className="rounded-lg md:rounded-2xl" />
                     </div>

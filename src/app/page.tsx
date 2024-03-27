@@ -15,7 +15,9 @@ export default function Home() {
             <HomeCertifications />
             <HomeServices />
             <OurClients />
-            <CaseStudyList />
+            <CaseStudyList 
+                innerClass="casestudy-listing"
+            />
             <OurClients />
         </>
     );

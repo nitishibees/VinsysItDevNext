@@ -17,14 +17,17 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <Head>
-                <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-            </Head>
+            <head>     
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+                    rel="stylesheet"
+                />
+            </head>
             <body>
                 <main className="flex min-h-screen flex-col items-center justify-between">
                     <SiteHeader />
                     {children}
-                    {/* <Footer /> */}
+                    <Footer />
                 </main>
             </body>
         </html>

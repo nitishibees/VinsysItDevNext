@@ -33,7 +33,7 @@ body {
 
 p {
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 32px;
     margin-top: 16px;
     font-weight: 400;
     color: var(--dark-grey);
@@ -105,26 +105,54 @@ input[type=number] {
         margin-left: 10px;
         background-size: 100% 100%;
     }
+}
 
-    &.not-require {
-        display: none !important;
+.light-btn {
+    background: var(--white-color);
+    border: 1px solid var(--blue-color);
+    color: var(--blue-color);
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        color: var(--white-color);
+        background: var(--blue-color);
+    }
+}
+
+.learn-more-btn {
+    color: var(--blue-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding-right: 28px;
+    position: relative;
+    
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: url(../../../public/images/icons/learn-arrow.svg) right center no-repeat;
+        background-size: 100%;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transition: all 0.5s ease-in-out;
+        transform: rotate(0deg);
     }
 
-    &.light-bg {
-        background: var(--white-color);
-        border: 1px solid var(--blue-color);
-        color: var(--blue-color);
-        box-shadow: none;
-
-        .icon {
-            display: none;
-        }
-
-        &:hover {
-            background: var(--blue-color);
-            color: var(--white-color);
+    &:hover {
+        &::after {
+            transform: rotate(45deg);
         }
     }
+
 }
 
 //Common Heading
@@ -142,5 +170,9 @@ input[type=number] {
 @media only screen and (max-width: 767px) {
     .container {
         padding: 0px 15px;
+    }
+
+    .common-heading-md {
+        font-size: 32px;
     }
 }
