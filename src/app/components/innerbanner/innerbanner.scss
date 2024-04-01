@@ -1,0 +1,47 @@
+.inner-banner {
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(28, 55, 91, 0) 46.25%, #1C375B 100%);
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        object-position: center;
+    }
+
+    .inner-content {
+        position: relative;
+        z-index: 1;
+        min-height: 400px;
+        padding: 30px 0;
+    }
+
+
+    h1 {
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 56.26px;
+        text-align: center;
+        color: var(--white-color);
+    }
+    p {
+        color: var(--white-color);
+    }
+}

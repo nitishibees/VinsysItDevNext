@@ -1,25 +1,28 @@
 import FooterForm from '@/app/components/footer/FooterForm'
+import CountryData, { CityData } from '@/app/components/footer/Country'
 import Link from "next/link"
 import Image from "next/image"
+import '@/app/components/footer/footer.scss'
+
 const Footer = props => {
     return (
         <>
             <footer className="footer">
                 <div className="container">
                     <div className="top-section">
-                        <div className="inner-content grid grid-cols-5 gap-4 justify-content-between">
-                            <div className="left-section col-span-5 md:col-span-2">
+                        <div className="inner-content grid grid-cols-6 gap-4 justify-content-between">
+                            <div className="left-section col-span-6 md:col-span-3">
                                 <div className="title">Let’s Talk</div>
                                 <FooterForm />
                             </div>
-                            <div className="right-section col-span-5 md:col-span-2">
-                                
+                            <div className="right-section col-span-6 md:col-span-3">
+                            
                             </div>
                         </div>
                     </div>
-                    <div className="bottom-section flex justify-content-between items-center">
+                    <div className="bottom-section flex justify-between items-center">
                         <div className="left">©1998–2024 Vinsys | All Rights Reserved</div>
-                        <div className='social-icons flex justify-content-center align-items-center gap-4'>
+                        <div className='social-icons flex justify-center items-center gap-4'>
                             <span>Follow Us:</span>
                             <Link href={'https://www.facebook.com/vinsys'}>
                                 <Image src={'/images/icons/social-fb.webp'} alt={'facebook'} width={28} height={28} />

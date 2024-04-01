@@ -1,8 +1,10 @@
+import CommonBtn, { CommonBtnButton } from "../CommonTags"
+
 const FooterForm = props => {
     return (
         <>
             <form>
-                <ul className="d-flex justify-content-between">
+                <ul className="flex justify-between flex-wrap">
                     <li>
                         <input
                             type="text"
@@ -37,12 +39,11 @@ const FooterForm = props => {
                         ></textarea>
                         <input type="checkbox" name="fax" style={{ display: "none" }} />
                     </li>
-                    <li className="w-100">
-                        <div className="links">
-                            <button type="submit" className="common-btn">
-                                Submit Now <i className="icon">&nbsp;</i>
-                            </button>
-                        </div>
+                    <li className="w-full mt-2 md:mt-4">
+                        <CommonBtnButton 
+                            styleClass="w-max"
+                            text="Submit Now"
+                        />
                     </li>
                 </ul>
             </form>

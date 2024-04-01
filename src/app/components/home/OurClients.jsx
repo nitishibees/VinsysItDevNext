@@ -1,10 +1,30 @@
 "use client"
 import Image from "next/image"
-import { CommonSection, CommonHeadingHtwo, CommonSubHeading } from "../CommonTags"
+import { CommonHeadingHtwo, CommonSubHeading } from "../CommonTags"
 import '@/app/components/home/ourClients.scss'
-import { useEffect, useState } from "react"
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const OurClients = props => {
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 1200 },
+          items: 7,         
+        },
+        desktop: {
+          breakpoint: { max: 1199, min: 1024 },
+          items: 6,          
+        },
+        tablet: {
+          breakpoint: { max: 1023, min: 768 },
+          items: 4,
+        },
+        mobile: {
+          breakpoint: { max: 767, min: 0 },
+          items: 2,
+        }
+    };
     const slides = [
         '/images/home/clients/hsbc.webp',
         '/images/home/clients/hsbc.webp',
@@ -25,23 +45,6 @@ const OurClients = props => {
         '/images/home/clients/hsbc.webp',
         '/images/home/clients/hsbc.webp',
     ]
-
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
-    const nextSlide = () => {
-        setCurrentSlideIndex((prevIndex) =>
-          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-        );
-    };
-
-    // Effect to automatically switch slides every 3 seconds
-    useEffect(() => {
-        
-        const intervalId = setInterval(() => {
-            nextSlide();
-        }, 3000);
-        return () => clearInterval(intervalId);
-    }, [slides]);
     
     return (
         <>
@@ -52,27 +55,13 @@ const OurClients = props => {
                         <CommonSubHeading text="Lorem Ipsum is simply dummy text of the printing " />
                     </div>
                 </div>
-                <div className="slider-container"
-                    style={{ transform: `translateX(-${currentSlideIndex * 100}%)` }}
-                >
+                <div className="slider-container">
                     <div className="logo-slider mt-8 md:mt-12" >
-                        {slides.map((logo, index) => (
-                            <>
-                                <div
-                                    key={index}
-                                    className={`slide ${index === currentSlideIndex ? 'active' : ''} `}
-                                >
-                                    <p>{index}</p>
-                                    <Image 
-                                        src={logo}
-                                        alt={'logo'}
-                                        width={145}
-                                        height={50}
-                                    />    
-                                </div>
-                                
-                            </>
-                        ))}
+                        <Carousel responsive={responsive} arrows={false} swipeable={false} draggable={false} showDots={false} infinite={true} autoPlay={true} customTransition="linear 4s">  
+                            {slides.map((slide, index) => (
+                                <img key={index} src={slide} alt={`Slide ${index}`} />
+                            ))}
+                        </Carousel>
                     </div>
                 </div>
                 

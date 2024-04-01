@@ -1,0 +1,57 @@
+.offering-section {
+    .item {
+        border-radius: 12px;
+        overflow: hidden;
+        background: #F0F0F0;
+
+        &:nth-child(odd) {
+            .img-section {
+                order: 1;
+
+                &::after {
+                    background: linear-gradient(-90deg, #F0F0F0 1%, rgba(232, 232, 232, 0.6) 30%, rgba(165, 165, 165, 0) 50%);
+                }
+            }
+            .content-section {
+                order: 2;
+            }
+        }
+    }
+    
+    .img-section {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #F0F0F0 1%, rgba(232, 232, 232, 0.6) 30%, rgba(165, 165, 165, 0) 50%);
+            background-size: cover;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content-section {
+        padding: 35px 45px;
+    }
+
+    .title {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 44px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+    }
+}

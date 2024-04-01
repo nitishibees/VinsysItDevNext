@@ -11,7 +11,15 @@ const CommonBtn = (props) => {
         </Link>
     )
 }
-
+const CommonBtnButton = (props) => {
+    return (
+        <button 
+            type="submit"
+            className={`common-btn ${props.styleClass}`}>
+                {props.text}<i className="icon"><Image src={'/images/icons/icon-arrow.svg'} alt="icon" width={25} height={15} /></i>
+        </button>
+    )
+}
 const CommonHeading = (props) => {
     return (
         <>
@@ -23,7 +31,6 @@ const CommonHeading = (props) => {
         </>
     )
 }
-
 const CommonHeadingHone = (props) => {
     return (
         <>
@@ -35,7 +42,6 @@ const CommonHeadingHone = (props) => {
         </>
     )
 }
-
 const CommonHeadingHtwo = (props) => {
     return (
         <>
@@ -47,7 +53,6 @@ const CommonHeadingHtwo = (props) => {
         </>
     )
 }
-
 const CommonSubHeading = props => {
     return (
         <>
@@ -55,7 +60,6 @@ const CommonSubHeading = props => {
         </>
     )
 }
-
 const CommonSection = props => {
     return (
         <>
@@ -69,4 +73,4 @@ const CommonSection = props => {
 }
 
 export default CommonBtn
-export {CommonHeadingHone, CommonHeadingHtwo, CommonHeading, CommonSection, CommonSubHeading}
+export {CommonBtnButton, CommonHeadingHone, CommonHeadingHtwo, CommonHeading, CommonSection, CommonSubHeading}

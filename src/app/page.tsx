@@ -11,7 +11,14 @@ export default function Home() {
     return (
         <>
             <HomeBanner />
-            <HomeAbout />
+            <HomeAbout 
+                imgSrc='/images/home/homeAbout.webp'
+                imgAlt='about'
+                heading='Lorem Ipsum Dollar'
+                text='Digital transformation is the cultural, organizational and operational change of an organization, industry or ecosystem through a smart integration of digital technologies, processes and competencies across all levels and functions in a staged way. Digital transformation (also DX or DT) leverages technologies to create value for various stakeholders (customers in the broadest possible sense), innovate and adapt to changing circumstances.'
+                btnText='Talk to us'
+                btnLink='#'
+            />
             <HomeCertifications />
             <HomeServices />
             <OurClients />
