@@ -29,11 +29,11 @@ const OfferingItems = props => {
         <>
             <li className="item">
                 <div className="inner-content grid grid-cols-4">
-                    <div className="content-section col-span-2">
+                    <div className="content-section col-span-4 lg:col-span-2">
                         <div className="title">{props.title}</div>
                         <p>{props.text}</p>
                     </div>
-                    <div className='img-section col-span-2'>
+                    <div className='img-section col-span-4 lg:col-span-2'>
                         <Image src={props.imgSrc} alt={props.imgAlt} width={589} height={300} />
                     </div>
                 </div>

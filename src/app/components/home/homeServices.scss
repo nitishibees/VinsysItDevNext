@@ -8,7 +8,6 @@
         'two six six';
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr;
-        padding: 15px;
     }
 
     .item {
@@ -85,5 +84,11 @@
             'six';
         }
         
+        .item-3,
+        .item-6 {
+            flex-direction: column;
+            align-items: flex-start;
+            max-height: initial;
+        }
     }
 }

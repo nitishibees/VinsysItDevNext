@@ -55,3 +55,36 @@
         line-height: 26px;
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .offering-section {
+        .content-section {
+            padding: 25px;
+            order: 2;
+        }
+        .item{
+            &:nth-child(odd) {
+                .img-section::after {
+                    background: linear-gradient(360deg, #F0F0F0 1%, rgba(232, 232, 232, 0.6) 30%, rgba(165, 165, 165, 0) 50%);
+                }
+            }
+            .img-section {
+                &::after {
+                    background: linear-gradient(360deg, #F0F0F0 1%, rgba(232, 232, 232, 0.6) 30%, rgba(165, 165, 165, 0) 50%);
+                    top: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .offering-section {
+        .content-section {
+            padding: 15px;
+        }
+        .title {
+            font-size: 24px;
+        }
+    }
+}

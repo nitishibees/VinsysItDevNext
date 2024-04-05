@@ -74,6 +74,16 @@ const AboutPage = props => {
                 />
                 <CertificationItem 
                     imgSrc='/images/home/certification/iso.webp'
+                    imgAlt='Security Management'
+                    title='Security Management'
+                />
+                <CertificationItem 
+                    imgSrc='/images/home/certification/iso.webp'
+                    imgAlt='Quality Management'
+                    title='Quality Management'
+                />
+                <CertificationItem 
+                    imgSrc='/images/home/certification/iso.webp'
                     imgAlt='Quality Management'
                     title='Quality Management'
                 />

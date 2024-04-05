@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { useEffect, useState } from "react";
 
-const CountryData = ({children,iconImage,index,country})=>{
+const CountryData = props =>{
     const [isOpen, setIsOpen] = useState();
 
     const handleCountryClick = () => {
@@ -11,29 +11,27 @@ const CountryData = ({children,iconImage,index,country})=>{
 
     return(
         <div className="item"  onClick={handleCountryClick}>
-            <div className={`country d-flex align-items-center ${isOpen ? " active" : ""}`}>
+            <div className={`country flex items-center ${isOpen ? " active" : ""}`}>
                 <div className="icon">
                     <Image                   
-                    src={iconImage}
-                    width={32}
-                    loading = 'lazy'
-                    height={32}
-                    alt=""
+                        src={props.iconSrc}
+                        width={32}
+                        loading = 'lazy'
+                        height={32}
+                        alt={props.iconAlt}
                     />                    
                 </div>
-                <div className="title">{country}</div>
+                <div className="title">{props.country}</div>
             </div>
             {isOpen &&
                 <div className={`content-box d-flex`}>
-                    {children}
+                    {props.children}
                 </div> 
             }
-            
-            
         </div>
     )
 }
-const CityData = (props)=>{
+const CityData = props=>{
     return(
         <div className="city-data">
             <div className="title">{props.cityname}</div>

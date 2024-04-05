@@ -4,8 +4,14 @@
     background-image: url('../../../../public/images/shapes/shape.webp');
     background-position: left center;
     background-repeat: no-repeat;
-    background-size: 65%;
+    background-size: 65% 100%;
     .title {
         color: var(--lightblue-color);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .home-certification-section {
+        background-image: none;
     }
 }

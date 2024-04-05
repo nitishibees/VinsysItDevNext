@@ -24,6 +24,8 @@ export default function Home() {
             <OurClients />
             <CaseStudyList 
                 innerClass="casestudy-listing"
+                heading="Case Study"
+                subHeading="Lorem Ipsum is simply dummy text of the printing"
             />
             <OurClients />
         </>

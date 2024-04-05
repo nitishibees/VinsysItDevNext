@@ -1,12 +1,12 @@
 header.header {
     position: static;
-    top: 0px;
+    top: -90px;
     z-index: 99;
     left: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
-    transition: all linear .3s;
+    transition: all 0.5s ease-in-out;
     right: 0;
     padding: 10px 0px;
     width: 100%;
@@ -19,9 +19,22 @@ header.header {
     .logo {
         padding: 0px 0;
         transition: all linear .3s;
+        min-width: 80px;
 
         img {
             filter: none !important;
+        }
+    }
+
+    .toggle-icon {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        background: var(--blue-color);
+        border-radius: 4px;
+
+        img {
+            filter: invert(1) brightness(100);
         }
     }
 
@@ -30,8 +43,11 @@ header.header {
         display: none;
     }
 
-    .nav-sec.no-require {
-        display: none;
+    .navigation {
+        
+        & > li {
+            min-width: max-content;
+        }
     }
 
     a,
@@ -46,7 +62,7 @@ header.header {
         ul.dropdown {
             position: absolute;
             width: 269px;
-            padding: 27px 23px 23px 23px;
+            padding: 10px 20px;
             background: var(--white-color);
             box-shadow: 0px 5px 39px 0px rgba(0, 0, 0, 0.10);
             transition: all linear .3s;
@@ -56,7 +72,8 @@ header.header {
 
             li {
                 a {
-                    padding: 0 0 20px;
+                    display: flex;
+                    padding: 10px 0;
                 }
 
                 &:last-of-type {
@@ -67,7 +84,7 @@ header.header {
             }
         }
 
-        &:last-of-type {
+        &:nth-last-child(-n+2) {
             ul.dropdown {
                 right: 0;
             }
@@ -106,8 +123,8 @@ header.header {
             }
 
             &:hover {
-                a,
-                .mLink {
+                > a,
+                > .mLink {
                     color: var(--green-color);
                     &:after {
                         transform: rotate(-225deg);
@@ -171,40 +188,147 @@ header.header {
     &.small {
         background: #fff;
         box-shadow: 0 0 25px rgba(0, 0, 0, .1);
-
-        .logo {
-            padding: 5px 0;
-            max-width: 125px;
-        }
+        position: fixed;
+        top: 0;
 
         a,
         .mLink {
-            color: var(--blue-color) !important;
-            filter: none !important;
-            transition: all linear .3s;
+            color: var(--blue-color);
+            transition: all ease-in-out 1s;
 
             &:hover {
-                color: var(--green-color) !important
+                color: var(--green-color) 
             }
         }
 
-        li:hover>a {
+        li:hover > a {
             color: var(--green-color);
         }
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1399px) {
+    header.header {
+        .navigation {
+            .mLink,
+            a {
+                font-size: 12px;
+            }    
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    header.header {
+        .navigation {
+            .mLink,
+            a {
+                font-size: 10px;
+            }    
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
     header.header {
         .toggle-icon {
-            display: block;
-        }
-
-        .nav-sec {
-            display: none;
+            display: inline-flex;
         }
         .top {
             display: none;
         }
+
+        .close-icon {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            background: var(--blue-color);
+            border-radius: 4px;
+            margin: 15px;
+
+            img {
+                filter: invert(1) brightness(100);
+            }
+        }
+
+        .nav-sec {
+            position: fixed;
+            right: -100%;
+            top: 0;
+            width: 300px;
+            height: 100vh;
+            overflow-y: scroll;
+            background: var(--white-color);
+            transition: all 0.5s ease-in-out;
+            &.active {
+                right: 0;
+            }
+        }
+
+        .navigation {
+            flex-direction: column;
+            width: 100%;
+            gap: 0;
+            li {
+                padding: 10px;
+                border-bottom: 1px solid rgba(34,34,34,.15);
+            }
+
+            a {
+                font-size: 14px;
+            }
+        }
+
+        li{
+            &:hover {
+                ul.dropdown {
+                    display: block;
+                    height: 0;
+                    opacity: 0;
+                    transition: all 0.5s ease-in-out;
+
+                    &.show {
+                        display: block;
+                        position: relative;
+                        left: 0;
+                        right: 0;
+                        top: 8px;
+                        width: 100%;
+                        box-shadow: none;
+                        padding: 0px;
+                        height: 100%;
+                        opacity: 1;
+                    }
+
+                    li {
+                        padding: 0px;
+
+                        &:last-of-type {
+                            border-bottom: 0px;
+                            a {
+                                padding: 10px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.dropdown-menus {
+                span.arrow-btn {
+                    top: 2px;
+                    display: block;
+                }
+    
+                & > a,
+                & > .mLink {
+                    font-size: 14px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        } 
     }
 }

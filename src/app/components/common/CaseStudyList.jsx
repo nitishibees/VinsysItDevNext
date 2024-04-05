@@ -7,10 +7,12 @@ const CaseStudyList = props => {
     return (
         <>
             <CommonSection styleClass={props.innerClass}>
-                <div className="heading-wrapper text-center">
-                    <CommonHeadingHtwo mainHeading={'Case Study'} />
-                    <CommonSubHeading text="Lorem Ipsum is simply dummy text of the printing " />
-                </div>
+                {props.heading &&
+                    <div className="heading-wrapper text-center">
+                        <CommonHeadingHtwo mainHeading={props.heading} />
+                        <CommonSubHeading text={props.subHeading} />
+                    </div>
+                }
                 <div className="items grid grid-cols-6 gap-4 mt-8 md:mt-12">
                     <div className="item col-span-6 sm:col-span-3 md:col-span-2">
                         <div className="inner-content flex flex-col gap-6 md:gap-12 justify-between">
@@ -26,9 +28,7 @@ const CaseStudyList = props => {
                                 </div>
                             </div>
                             <div className="btn-wrapper">
-                                <Link href={'#'} className="learn-more-btn" aria-label="learnmore">Learn More
-                                    {/* <Image src={'/images/icons/learn-arrow.svg'} alt="Learn More Arrow" width={24} height={24} /> */}
-                                </Link>
+                                <Link href={'#'} className="learn-more-btn" aria-label="learnmore">Learn More</Link>
                             </div>
                         </div>
                     </div>
@@ -46,9 +46,7 @@ const CaseStudyList = props => {
                                 </div>
                             </div>
                             <div className="btn-wrapper">
-                                <Link href={'#'} className="learn-more-btn" aria-label="learnmore">Learn More
-                                    {/* <Image src={'/images/icons/learn-arrow.svg'} alt="Learn More Arrow" width={24} height={24} /> */}
-                                </Link>
+                                <Link href={'#'} className="learn-more-btn" aria-label="learnmore">Learn More</Link>
                             </div>
                         </div>
                     </div>
@@ -66,9 +64,7 @@ const CaseStudyList = props => {
                                 </div>
                             </div>
                             <div className="btn-wrapper">
-                                <Link href={'#'} className="learn-more-btn" aria-label="learnmore">Learn More
-                                    {/* <Image src={'/images/icons/learn-arrow.svg'} alt="Learn More Arrow" width={24} height={24} /> */}
-                                </Link>
+                                <Link href={'#'} className="learn-more-btn" aria-label="learnmore">Learn More</Link>
                             </div>
                         </div>
                     </div>

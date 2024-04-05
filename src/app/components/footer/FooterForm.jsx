@@ -3,6 +3,7 @@ import CommonBtn, { CommonBtnButton } from "../CommonTags"
 const FooterForm = props => {
     return (
         <>
+            <div className="title">{props.formHeading}</div>
             <form>
                 <ul className="flex justify-between flex-wrap">
                     <li>

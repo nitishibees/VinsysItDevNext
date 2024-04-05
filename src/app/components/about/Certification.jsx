@@ -16,7 +16,7 @@ const Certification = props => {
                         text={props.subHeading}
                     />
                 </div>
-                <div className="items grid grid-cols-6 gap-4 md-gap-5 mt-8 md:mt-12 place-content-center">
+                <div className="items flex flex-wrap mt-8 md:mt-12 justify-center">
                     {props.children}
                 </div>
             </CommonSection>
@@ -27,11 +27,13 @@ const Certification = props => {
 const CertificationItem = props => {
     return (
         <>
-            <div className='item flex items-center col-span-6 sm:col-span-3 md:col-span-2'>
-                <div className="img-wrapper">
-                    <Image src={props.imgSrc} alt={props.imgAlt} width={115} height={115} />
+            <div className='item w-full md:w-1/2 lg:w-2/6'>
+                <div className="inner-content flex">
+                    <div className="img-wrapper">
+                        <Image src={props.imgSrc} alt={props.imgAlt} width={115} height={115} />
+                    </div>
+                    <div className="title">{props.title}</div>
                 </div>
-                <div className="title">{props.title}</div>
             </div>
         </>
     )

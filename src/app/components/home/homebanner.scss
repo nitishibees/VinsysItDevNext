@@ -59,7 +59,7 @@
 @media only screen and (max-width: 767px) {
     .homebanner {
         flex-direction: column;
-        background: #333;
+        background: linear-gradient(103.52deg, #F4F8F1 56.26%, rgba(208, 222, 232, 0.43) 98.6%);
 
         &::after {
             display: none;
@@ -72,6 +72,10 @@
         .inner-content {
             .common-heading {
                 font-size: 36px;
+                color: var(--blue-color);
+            }
+            p {
+                color: var(--blue-color);
             }
         }
     }
